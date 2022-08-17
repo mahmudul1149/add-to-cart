@@ -34,7 +34,7 @@ export default [
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
     price: 109.95,
     title:
-      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "Your perfect pack for everyday use and walks in the forest.",
 
     image:
       "https://static-01.daraz.com.bd/p/d492a1da4f164969860a774710fabf51.jpg",
@@ -47,7 +47,7 @@ export default [
     title: "Mens Casual Premium Slim Fit T-Shirts ",
     price: 22.3,
     title:
-      "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and .",
+      "Slim-fitting style, contrast raglan long sleeve .",
     category: "men's clothing",
     image:
       "https://static-01.daraz.com.bd/p/4223e88dcba2606323db38839e93cdec.jpg",

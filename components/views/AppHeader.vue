@@ -5,14 +5,14 @@
         <img src="../../assets/myweb.png" alt="" />
       </div>
       <div class="flex-nav">
-        <div>
-          <select name="#" id="">
-            <option value="#">English</option>
-            <option value="#">বাংলা</option>
-          </select>
-        </div>
         <nav>
           <ul v-show="!mobile" class="links">
+            <li>
+              <nuxt-link to="/">Home</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/product">Product</nuxt-link>
+            </li>
             <li>
               <nuxt-link to="/about">About</nuxt-link>
             </li>
@@ -20,27 +20,32 @@
               <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/wishlist">Wish list</nuxt-link>
+              <nuxt-link to="/wishlist" class="flex-cart"> <span>cart</span> <img class="cart-icons"
+                  src="~/assets/cart-icon-28356.png" alt=""> <span class="quantity">0</span></nuxt-link>
+                 
             </li>
           </ul>
           <ul v-show="mobileNav" class="mobile-nav">
             <li>
+              <nuxt-link to="/">Home</nuxt-link>
+            </li>
+             <li>
+              <nuxt-link to="/product">Product</nuxt-link>
+            </li>
+            <li>
               <nuxt-link to="/about">About</nuxt-link>
             </li>
             <li>
               <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
-            <li>
-              <nuxt-link to="/wishlist">Wish list</nuxt-link>
+     
+              <li>
+              <nuxt-link to="/wishlist" >Cart</nuxt-link>
+                 
             </li>
           </ul>
         </nav>
-        <img
-          class="bars dropdown"
-          @click="submit"
-          src="../../assets/barss.png"
-          alt=""
-        />
+        <img class="bars dropdown" @click="submit" src="../../assets/barss.png" alt="" />
       </div>
     </header>
   </div>
@@ -87,14 +92,24 @@ export default {
 </script>
 
 <style>
+
+
 header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  padding: 0 3rem;
+  padding: 0 2rem;
+  /* padding: 0 3rem; */
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
+
 .links {
   list-style: none;
   display: flex;
@@ -104,31 +119,42 @@ header {
 #header .logo img {
   width: 90px;
 }
+
 #header ul li a {
   display: inline-block;
   text-decoration: none;
   color: #333;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin: 0.4rem;
 }
+
 .flex-nav {
   display: flex;
   align-items: center;
 }
+
+.flex-nav .flex {
+  display: flex;
+  display: none;
+}
+
 .flex-nav select {
   padding: 0.3rem;
   outline: none;
   background: rgb(213, 251, 253);
   font-size: 1.2rem;
 }
+
 .flex-nav option {
   background: white;
 }
+
 .flex-bars {
   display: flex;
   align-items: center;
 }
+
 .bars {
   margin-left: 2rem;
   width: 30px;
@@ -136,6 +162,29 @@ header {
   display: none;
 }
 
+.cart-icons {
+  width: 30px;
+  height: 30px;
+
+}
+.flex-cart {
+  display: flex !important;
+  align-items: center;
+  position: relative;
+}
+.quantity {
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1rem;
+  background: red !important;
+  color: white;
+}
 .cross {
   margin-left: 2rem;
   width: 50px;
@@ -147,6 +196,7 @@ header {
     position: relative;
     display: inline-block;
   }
+
   .mobile-nav {
     display: block;
     position: absolute;
@@ -159,9 +209,11 @@ header {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
+
   .mobile-nav {
     list-style: none;
   }
+
   .mobile-nav ul li a {
     text-decoration: none;
     color: black;
@@ -170,8 +222,17 @@ header {
     display: block;
     font-size: 15px;
   }
+
   .flex-nav select {
     font-size: 1rem;
   }
+}
+@media  screen and (max-width: 900px) {
+    .cart-icons {
+      display: none;
+    }
+    .cart-icons span {
+      display: none;
+    }
 }
 </style>

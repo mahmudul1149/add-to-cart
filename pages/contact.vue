@@ -108,6 +108,10 @@
   justify-content: center;
   gap: 2rem;
 }
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
 .contact {
   margin-top: 5rem;
   padding: 2rem;

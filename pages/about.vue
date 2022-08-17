@@ -1,5 +1,5 @@
 <template>
-  <div class="about container">
+  <div class="about container mt-3">
     <div class="box-container">
       <div class="image-box">
         <img src="../assets/metting1.jpg" alt="" />
@@ -36,6 +36,9 @@ export default {};
 </script>
 
 <style>
+.mt-3 {
+  margin-top: 4rem !important;
+}
 .about .box-container {
   display: flex;
   gap: 1.5rem;
