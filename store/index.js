@@ -21,6 +21,10 @@ export const getters = {
       item.title.toLowerCase().includes(state.searchValue.toLowerCase())
     );
   },
+  length(state) {
+
+    return state.cart.reduce((acc, val) => acc + val.quantity, 0)
+  }
 };
 export const mutations = {
   initializeStore(state) {
@@ -57,6 +61,18 @@ export const mutations = {
   SEARCH_VALUE(state, value) {
     state.searchValue = value;
   },
+  REMOVE_QTY(state, id) {
+    const record = state.cart.find((el) => el.id === id);
+    if (record.quantity > 1) {
+      record.quantity--;
+    } else {
+      state.cart.splice(state.cart.indexOf(record), 1);
+    }
+  },
+  ADD_QUANTITY(state, id) {
+    const record = state.cart.find((el) => el.id === id);
+    record.quantity++;
+  },
 };
 
 export const actions = {
@@ -74,11 +90,9 @@ export const actions = {
     commit("GET_PRODUCT", item);
   },
   initProduct({ commit }) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
+
         commit("GET_PRODUCT", product);
-      }, 2000);
-    });
+  
   },
   addItems({ commit }, item) {
     commit("ADD_ITEM", item);

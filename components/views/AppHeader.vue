@@ -20,8 +20,8 @@
               <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/wishlist" class="flex-cart"> <span>cart</span> <img class="cart-icons"
-                  src="~/assets/cart-icon-28356.png" alt=""> <span class="quantity">0</span></nuxt-link>
+              <nuxt-link to="/cart" class="flex-cart"> <span>Cart</span> <img class="cart-icons"
+                  src="~/assets/cart-icon-28356.png" alt=""> <span class="quantity">{{length}}</span></nuxt-link>
                  
             </li>
           </ul>
@@ -40,7 +40,7 @@
             </li>
      
               <li>
-              <nuxt-link to="/wishlist" >Cart</nuxt-link>
+              <nuxt-link to="/cart" >Cart</nuxt-link>
                  
             </li>
           </ul>
@@ -59,6 +59,11 @@ export default {
       windrwWidth: null,
       mobile: null,
     };
+  },
+  computed: {
+    length() {
+      return this.$store.getters.length
+    }
   },
   created() {
     if (typeof window !== "undefined") {
@@ -87,6 +92,9 @@ export default {
         return;
       }
     },
+  },
+   mounted() {
+    this.$store.dispatch("initializeGetStore");
   },
 };
 </script>

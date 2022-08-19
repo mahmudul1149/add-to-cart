@@ -6,7 +6,7 @@
         <p>25% of all Products</p>
 
         <button class="btn btnDiv">
-          <router-link to="/wishlist"
+          <router-link to="/product"
           class="btn btn-buy">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="h-6 w-6 inline" fill="white" viewBox="0 0 24 24"
             stroke="currentColor">

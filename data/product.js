@@ -100,6 +100,7 @@ export default [
     image:
       "https://th.bing.com/th/id/R.62309e28bbce4c4dde402821e40f081d?rik=lMMYsI5qB8W2vw&pid=ImgRaw&r=0",
     category: " Bikes & Cars",
+    site: 'Daraz'
   },
   {
     id: 11,
