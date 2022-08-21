@@ -2,7 +2,7 @@
   <div>
     <header id="header">
       <div @click="goTo" class="logo">
-        <img src="../../assets/myweb.png" alt="" />
+        <img src="~/assets/sho.jpg" alt="" />
       </div>
       <div class="flex-nav">
         <nav>
@@ -112,7 +112,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   padding: 0 2rem;
   /* padding: 0 3rem; */
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
@@ -125,7 +125,7 @@ header {
 }
 
 #header .logo img {
-  width: 90px;
+  width: 60px;
 }
 
 #header ul li a {

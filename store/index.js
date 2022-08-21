@@ -24,7 +24,11 @@ export const getters = {
   length(state) {
 
     return state.cart.reduce((acc, val) => acc + val.quantity, 0)
-  }
+  },
+  
+total(state) {
+  return state.cart.reduce((acc, val) => acc + val.quantity * val.price, 0)
+} 
 };
 export const mutations = {
   initializeStore(state) {
@@ -113,6 +117,9 @@ export const actions = {
     } catch (err) {
       console.log(err);
     }
+  },
+  addQtys({commit}, id) {
+    commit('ADD_QUANTITY', id)
   },
   initializeGetStore({ commit }) {
     commit("initializeStore");

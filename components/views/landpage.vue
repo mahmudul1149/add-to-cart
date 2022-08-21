@@ -41,8 +41,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
+}
+.land-page .content {
+  margin: 1rem;
+}
 .land-page h2 {
   font-size: 2rem;
   color: white;
@@ -116,5 +119,12 @@ export default {
 			  transform: scale(1);
 	}
   }
-
+@media  screen and (max-width: 900px){
+  .land-page {
+    flex-direction: column;
+  }
+  .land-page img {
+    height: 250px;
+  }
+}
 </style>
