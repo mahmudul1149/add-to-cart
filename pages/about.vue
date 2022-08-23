@@ -6,17 +6,15 @@
       </div>
       <div class="about-box">
         <h1>OUR MISSION</h1>
-
         <p>
-          You must have searched across eCommerce platforms to find the best
-          price once in a while. We know it’s tiring. We have done this too and
-          we decided to solve this problem. When you search for a product on
-          Mullokoto it shows comparative results from top eCommerce platforms.
-          You can further filter the results based on price and listing dates.
-          We, Mullokoto Team, are continuously updating the product database so
-          that you always get the best deals. Oh, I almost forgot. It’s
-          completely free! So, what are you waiting for? Explore Mullokoto now
-          and purchase your favorite products at the best price.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis consequatur aut ratione iste maxime quia,
+          harum et repellendus? Quod aspernatur quae, maxime libero placeat deserunt et commodi sit maiores ullam amet.
+          Ipsum optio voluptatibus libero omnis aspernatur accusamus reiciendis eveniet tempora aperiam sed eligendi
+          soluta, atque nemo nesciunt praesentium fugit! Deleniti, cupiditate eos ex quibusdam voluptatibus libero
+          magnam dolorem dolores! Autem, modi voluptates debitis quam deleniti architecto repellendus doloremque
+          perferendis recusandae ea delectus suscipit dolorem hic illum, exercitationem in laboriosam quos atque aut
+          necessitatibus deserunt. Saepe porro ipsum impedit, consectetur iste nemo maxime molestias expedita atque
+          
         </p>
       </div>
     </div>
@@ -39,11 +37,13 @@ export default {};
 .mt-3 {
   margin-top: 4rem !important;
 }
+
 .about .box-container {
   display: flex;
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
 .about .image-box img {
   margin-top: 4rem;
   width: 600px;
@@ -52,9 +52,12 @@ export default {};
   background-size: cover;
   background-position: no-repeat;
 }
+
 .about .about-box {
   width: 600px;
+  margin-top: 2rem;
 }
+
 .about .about-box h1 {
   color: #1dec0a;
   font-size: 2rem;
@@ -62,78 +65,91 @@ export default {};
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
 .about .about-box p {
   line-height: 1.4;
   font-size: 1.4rem;
   color: rgb(52, 6, 180);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .contact-form {
   text-align: center;
   margin-top: 3rem;
 }
+
 .contact-form h2 {
   color: #960276e0;
 }
+
 .btn-dark {
   border: none;
   outline: none;
- margin-top: 1rem;
- background: transparent;
+  margin-top: 1rem;
+  background: transparent;
 }
-.btn-dark .btn-sec  {
-   border-radius: 35px;
+
+.btn-dark .btn-sec {
+  border-radius: 35px;
   background: green;
   text-align: center;
   display: inline block;
   display: flex;
   align-items: center;
   gap: .5rem;
- padding: .7rem 1rem;
- color: white;
+  padding: .7rem 1rem;
+  color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- text-decoration: none;
- font-size: 1.1rem;
- transition: .3s ease-in;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: .3s ease-in;
 }
+
 .btn-dark .btn-sec:hover {
   background: white;
   color: #333;
   border: 1px solid #333;
-  box-shadow:inset 0 0 5px black;
+  box-shadow: inset 0 0 5px black;
 }
+
 @media screen and (max-width: 800px) {
   .about .box-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .about-box p {
     padding: 0 2rem;
     margin: 2rem;
   }
+
   .about-box h1 {
     padding: 0 2rem;
     margin: 2rem;
   }
+
   .about .image-box img {
     padding: 2rem;
     margin: 2rem;
   }
+
   .contact-box {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
   }
+
   .contact-box .form-container {
     width: 100%;
   }
+
   .contact-box .title-box {
     width: 100%;
   }
 
-  
+
   .sidebar {
     display: none;
   }

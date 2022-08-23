@@ -83,7 +83,7 @@ export default {
       if (typeof window !== "undefined") {
         // browser code
         this.windrwWidth = window.innerWidth;
-        if (this.windrwWidth <= 900) {
+        if (this.windrwWidth <= 700) {
           this.mobile = true;
           return;
         }
@@ -199,7 +199,7 @@ header {
   height: 50px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .dropdown {
     position: relative;
     display: inline-block;
@@ -210,7 +210,7 @@ header {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    top: 2.4rem;
+    top: 3.5rem;
     right: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;

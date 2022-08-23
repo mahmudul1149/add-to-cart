@@ -38,7 +38,7 @@
         </div>
         <div class="social-media">
           <span>
-            <a href="#" class="social-link">
+            <a href="https://twitter.com/dev_mahmudul" class="social-link">
               <svg data-v-03848583="" width="21" height="21" class="social-png" viewBox="0 0 27 21" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path data-v-03848583=""
@@ -47,7 +47,7 @@
               </svg>
             </a>
           </span>
-          <a class="social-link" href="https://www.linkedin.com/in/md-mahmudul-islam-4aa63323b/">
+          <a class="social-link" href="https://www.linkedin.com/in/md-mahmudul-islam01/">
             <svg data-v-03848583="" width="21" height="21" class="social-png" viewBox="0 0 24 23" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path data-v-03848583=""
@@ -55,7 +55,7 @@
                 fill="white"></path>
             </svg>
           </a>
-          <a class="social-link" href="https://www.instagram.com/mdmahmudul.uslam.1/">
+          <a class="social-link" href="https://www.instagram.com/mdmahmudul.islam.1/">
             <svg data-v-03848583="" width="21" height="20" class="social-png" viewBox="0 0 21 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path data-v-03848583=""
@@ -64,7 +64,7 @@
             </svg>
           </a>
 
-          <a class="social-link" href="https://www.facebook.com/mdmahmudul.uslam.1/">
+          <a class="social-link" href="https://www.facebook.com/md.mahmudul.islam.49/">
             <svg data-v-03848583="" width="21" height="21" class="social-png" viewBox="0 0 12 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path data-v-03848583=""

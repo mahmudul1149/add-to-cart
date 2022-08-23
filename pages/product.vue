@@ -3,7 +3,11 @@
   <div class="bg-dark">
     <div class="cart-width">
       <vue-confirm-dialog></vue-confirm-dialog>
+     <div class="feature">
+          <h1>FEATURED PRODUCTS</h1>
+     </div>
       <div class="cart-box">
+     
         <!-- <input type="text" name="" id="" /> -->
         <div class="box" v-for="item in filteredProducts" :key="item.id">
           <div class="image">
@@ -152,7 +156,7 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
   margin: 0 auto;
-  margin-top: 5rem;
+
 }
 .box .price {
   color: #9E00FF;
@@ -160,8 +164,21 @@ export default {
 }
 .cart-width {
   width: 100%;
-  padding: 2rem;
+    margin-top: 5rem;
 
+}
+.feature {
+  text-align: center;
+  
+}
+.feature h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    background: linear-gradient(90deg,#ff9100 6.7%,#fc05ef 40.08%,#3505f5 57.28%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .box {
