@@ -112,11 +112,14 @@ export default {};
   box-shadow: inset 0 0 5px black;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .about .box-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .about .about-box {
+    width: 400px;
   }
 
   .about-box p {
@@ -130,8 +133,9 @@ export default {};
   }
 
   .about .image-box img {
-    padding: 2rem;
-    margin: 2rem;
+  width: 300px;
+   background-size: cover;
+  background-position: no-repeat;
   }
 
   .contact-box {
@@ -150,8 +154,6 @@ export default {};
   }
 
 
-  .sidebar {
-    display: none;
-  }
+
 }
 </style>

@@ -4,31 +4,13 @@
     <div class="bg-secondery">
       <landpage-vue></landpage-vue>
     </div>
-    //
+
     <div class="cart-width">
       <vue-confirm-dialog></vue-confirm-dialog>
-      <!-- <div class="search-box">
-        <input
-          @input="searchInput"
-          class="input"
-          type="text"
-          name=""
-          id=""
-          placeholder="Search for products"
-          v-model="text"
-        />
-        <img class="search" src="../assets/search.png" alt="" />
-        <img
-          v-if="text"
-          class="cross"
-          @click="clear"
-          src="../assets/cros icon.png"
-          alt=""
-        />
-      </div> -->
+     
 
       <div class="cart-box">
-        <!-- <input type="text" name="" id="" /> -->
+
         <div class="box" v-for="item in filteredProducts" :key="item.id">
           <div class="image">
             <img class="cart-item" :src="item.image" alt="" />
@@ -51,7 +33,7 @@
         </div>
       </div>
     </div>
-    //
+
   </div>
 </template>
 

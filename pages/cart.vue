@@ -6,7 +6,7 @@
       <div v-if="carts.length" class="cart container">
         <h1 class="heading">Wishist Product</h1>
         <ul class="items flex-3">
-          <li class="item" v-for="item in carts" :key="item.id">
+          <li class="item " v-for="item in carts" :key="item.id">
             <img :src="item.image" alt="" class="cart-image" />
             <div class="title">
               <span>{{ item.title }}</span>
@@ -301,6 +301,9 @@ export default {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
+  .items li {
+    margin: 0 auto;
+  }
 
   .item {
     padding: 1rem;
@@ -328,19 +331,18 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-  .cart {
 
-  }
 
-  .cart .item{
- 
-  }
 
   .item {
     width: 320px;
     position: relative;
-         margin: 0  auto !important;
+    margin: 0 auto !important;
 
+  }
+    .items li {
+    margin: 0 auto !important;
+    box-sizing: border-box;
   }
 
   .cart .delete-image {
