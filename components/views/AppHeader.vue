@@ -20,16 +20,22 @@
               <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/cart" class="flex-cart"> <span>Cart</span> <img class="cart-icons"
-                  src="~/assets/cart-icon-28356.png" alt=""> <span class="quantity">{{length}}</span></nuxt-link>
-                 
+              <nuxt-link to="/cart" class="flex-cart">
+                <span>Cart</span>
+                <img
+                  class="cart-icons"
+                  src="~/assets/cart-icon-28356.png"
+                  alt=""
+                />
+                <span class="quantity">{{ length }}</span></nuxt-link
+              >
             </li>
           </ul>
           <ul v-show="mobileNav" class="mobile-nav">
             <li>
               <nuxt-link to="/">Home</nuxt-link>
             </li>
-             <li>
+            <li>
               <nuxt-link to="/product">Product</nuxt-link>
             </li>
             <li>
@@ -38,14 +44,18 @@
             <li>
               <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
-     
-              <li>
-              <nuxt-link to="/cart" >Cart</nuxt-link>
-                 
+
+            <li>
+              <nuxt-link to="/cart">Cart</nuxt-link>
             </li>
           </ul>
         </nav>
-        <img class="bars dropdown" @click="submit" src="../../assets/barss.png" alt="" />
+        <img
+          class="bars dropdown"
+          @click="submit"
+          src="../../assets/barss.png"
+          alt=""
+        />
       </div>
     </header>
   </div>
@@ -62,8 +72,8 @@ export default {
   },
   computed: {
     length() {
-      return this.$store.getters.length
-    }
+      return this.$store.getters.length;
+    },
   },
   created() {
     if (typeof window !== "undefined") {
@@ -93,15 +103,13 @@ export default {
       }
     },
   },
-   mounted() {
+  mounted() {
     this.$store.dispatch("initializeGetStore");
   },
 };
 </script>
 
 <style>
-
-
 header {
   position: fixed;
   top: 0;
@@ -126,6 +134,7 @@ header {
 
 #header .logo img {
   width: 60px;
+  cursor: pointer;
 }
 
 #header ul li a {
@@ -134,7 +143,8 @@ header {
   color: #333;
   font-weight: 700;
   font-size: 1.1rem;
-  margin: 0.4rem;
+  margin: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .flex-nav {
@@ -173,7 +183,6 @@ header {
 .cart-icons {
   width: 30px;
   height: 30px;
-
 }
 .flex-cart {
   display: flex !important;
@@ -235,12 +244,12 @@ header {
     font-size: 1rem;
   }
 }
-@media  screen and (max-width: 900px) {
-    .cart-icons {
-      display: none;
-    }
-    .cart-icons span {
-      display: none;
-    }
+@media screen and (max-width: 900px) {
+  .cart-icons {
+    display: none;
+  }
+  .cart-icons span {
+    display: none;
+  }
 }
 </style>
