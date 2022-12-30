@@ -142,7 +142,7 @@
         </div>
       </div>
       <div class="form-container">
-        <form action="#">
+        <form>
           <div class="input-box">
             <label for="#">Name</label>
             <div class="wrapper-box">
@@ -221,7 +221,7 @@
               placeholder="Enter your message"
             ></textarea>
           </div>
-          <button class="btn-secondery width">Submit</button>
+          <button class="btn-secondary width">Submit</button>
         </form>
       </div>
     </div>
@@ -251,9 +251,7 @@
   height: 100vh;
   background: #55ffe5;
 }
-.contact button {
-  border: 1px solid #fff;
-}
+
 .contact-box h3 {
   letter-spacing: 1px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -280,14 +278,10 @@
   text-align: center;
 }
 
-/* .contact-box .contact-box h3 {
-  margin-right: auto;
-} */
 .content-box {
   width: 25px;
   height: 25px;
 
-  /* padding: 0.975rem 0.5rem; */
   position: absolute;
   top: 10;
   left: 7px;
@@ -359,6 +353,16 @@ label {
 .png-box .png {
   width: 22px;
   height: 22px;
+}
+.btn-secondary {
+  padding: 0.5rem;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+  background: #1616bd;
+  border: 1px solid #fff;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .social-media {
