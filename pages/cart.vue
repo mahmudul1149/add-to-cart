@@ -6,46 +6,50 @@
       <div v-if="carts.length" class="cart container">
         <h1 class="heading">Wishist Product</h1>
         <ul class="items flex-3">
-          <li class="item " v-for="item in carts" :key="item.id">
+          <li class="item" v-for="item in carts" :key="item.id">
             <img :src="item.image" alt="" class="cart-image" />
             <div class="title">
               <span>{{ item.title }}</span>
             </div>
             <div class="price">
-              <span>{{ item.price }} $</span>
+              <span>{{ item.price }} ৳</span>
             </div>
             <div class="category addItem">
               <button @click="addQty(item.id)" class="btn add-btn">+</button>
               <span>{{ item.quantity }}</span>
-              <button @click="removeQty(item.id)" class="btn minus-btn">-</button>
+              <button @click="removeQty(item.id)" class="btn minus-btn">
+                -
+              </button>
             </div>
-       
-            <img @click="removeItems(item)" src="../assets/delete.png" alt="" class="delete-image" />
+
+            <img
+              @click="removeItems(item)"
+              src="../assets/delete.png"
+              alt=""
+              class="delete-image"
+            />
           </li>
-             <div class="checkout-info" v-if="!cart">
-                   <h2>Order info</h2>
-               <div class="checkout">
-            
-                <div class="check-box-left">
-                  <li>Total</li>
+          <div class="checkout-info" v-if="!cart">
+            <h2>Order info</h2>
+            <div class="checkout">
+              <div class="check-box-left">
+                <li>Total</li>
                 <li>Shipping cost</li>
                 <li>Total</li>
-               
-                </div>
-                <div class="check-box-right">
-                  <li>{{total}} $</li>
+              </div>
+              <div class="check-box-right">
+                <li>{{ total }} $</li>
                 <li>500 $</li>
-                <li>{{total + '500'}} $</li>
-           
-                
-                </div>
-               </div>
-               <button class="btn btn-checkout" @click="showModal">Checkout({{total}})</button>
-                <!-- <button @click="addPro">Checkout({{total}})</button> -->
-             </div>
+                <li>{{ finalAmount }} $</li>
+              </div>
+            </div>
+            <button class="btn btn-checkout" @click="showModal">
+              Checkout({{ total }})
+            </button>
+            <!-- <button @click="addPro">Checkout({{total}})</button> -->
+          </div>
         </ul>
         <img v-if="loadingGif" src="../assets/load.gif" alt="" />
-   
       </div>
       <div v-else class="show-cart">
         <div class="show">
@@ -62,26 +66,29 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import orderFormVue from "../components/views/orderForm.vue";
-import { mapGetters, mapActions } from "vuex";
 
 export default {
-  
-   components: {
-         orderFormVue
-   },
+  components: {
+    orderFormVue,
+  },
   data() {
     return {
       show: false,
       mag: "",
+      shippingCost: 500,
       loadingGif: false,
     };
   },
   computed: {
-    ...mapGetters(["carts", ]),
+    ...mapGetters(["carts"]),
     total() {
-      return this.$store.getters.total.toFixed(2)
-    }
+      return this.$store.getters.total;
+    },
+    finalAmount() {
+      return this.total + this.shippingCost;
+    },
   },
   methods: {
     removeItems(item) {
@@ -100,16 +107,16 @@ export default {
       });
     },
     addQty(item) {
-      this.$store.dispatch('addQtys', item)
-      console.log(item)
+      this.$store.dispatch("addQtys", item);
+      console.log(item);
     },
     removeQty(item) {
-      this.$store.commit('REMOVE_QTY', item)
-      console.log(item)
+      this.$store.commit("REMOVE_QTY", item);
+      console.log(item);
     },
     showModal() {
-      this.show = !this.show
-    }
+      this.show = !this.show;
+    },
   },
   mounted() {
     this.$store.dispatch("initializeGetStore");
@@ -131,7 +138,6 @@ export default {
   border-radius: 10px;
   margin-right: 2rem;
   margin-left: 2rem;
-
 }
 
 /* .items {
@@ -161,7 +167,6 @@ export default {
 .cart-icon {
   width: 50px;
   height: 50px;
-
 }
 .addItem span {
   margin: 5px;
@@ -173,9 +178,8 @@ export default {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  border: 1px solid #7CAFD2;
+  border: 1px solid #7cafd2;
   font-size: 1.6rem;
- 
 }
 
 .add-btn:hover,
@@ -196,21 +200,20 @@ export default {
 .addItem {
   width: 200px;
   margin-left: 3rem;
-
 }
-.checkout-info 
-{
+.checkout-info {
   margin-top: 1rem;
   width: 320px;
-    margin-left: auto !important;
-      margin-right: 2rem;
-      background: white !important;
-      box-shadow: 0 0 5px rgba(1, 150, 100, 0.815);
-      padding: 0.5rem;
-      box-sizing: border-box !important;
+  margin-left: auto !important;
+  margin-right: 2rem;
+  background: white !important;
+  box-shadow: 0 0 5px rgba(1, 150, 100, 0.815);
+  padding: 0.5rem;
+  box-sizing: border-box !important;
 }
 .checkout-info h2 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
 }
 .checkout {
@@ -218,17 +221,17 @@ export default {
   width: 300px;
   height: auto;
   justify-content: space-between;
-    box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 .checkout li {
   list-style: none;
- line-height: 1.4;
+  line-height: 1.4;
 }
 .check-box-right {
   text-align: right;
-   font-size: 1rem;
+  font-size: 1rem;
   font-weight: 700;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .check-box-left {
   font-size: 1rem;
@@ -237,8 +240,8 @@ export default {
 }
 .btn-checkout {
   width: 100%;
-  padding: .6rem 1rem;
-  background:#246EF6;
+  padding: 0.6rem 1rem;
+  background: #246ef6;
   border-radius: 35px;
   color: white;
   font-size: 1rem;
@@ -251,6 +254,7 @@ export default {
 }
 
 .heading {
+  padding-top: 1.5rem;
   margin-bottom: 2rem;
   text-align: center;
   font-size: 2rem;
@@ -288,15 +292,12 @@ export default {
   height: 100%;
 }
 
-
-
 @media screen and (max-width: 900px) {
   .cart {
     margin-top: 4rem;
   }
 
   .items {
-
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -324,23 +325,18 @@ export default {
     text-align: left !important;
   }
   .addItem {
-  width: 200px;
-  margin-left: 0rem;
-
-}
+    width: 200px;
+    margin-left: 0rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
-
-
-
   .item {
     width: 320px;
     position: relative;
     margin: 0 auto !important;
-
   }
-    .items li {
+  .items li {
     margin: 0 auto !important;
     box-sizing: border-box;
   }
@@ -350,9 +346,7 @@ export default {
     top: 0;
     right: 0;
   }
-  .checkout-info 
-
-  {
+  .checkout-info {
     margin-right: 3rem;
     margin-bottom: 1rem;
   }

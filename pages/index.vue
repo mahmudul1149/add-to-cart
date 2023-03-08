@@ -12,7 +12,7 @@
           <div class="image">
             <img class="cart-item" :src="item.image" alt="" />
           </div>
-          <h3 class="price">{{ item.price }} $</h3>
+          <h3 class="price">{{ item.price }} ৳</h3>
           <h3>{{ item.title }}</h3>
 
           <div class="sites">
