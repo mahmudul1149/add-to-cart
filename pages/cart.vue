@@ -44,7 +44,7 @@
               </div>
             </div>
             <button class="btn btn-checkout" @click="showModal">
-              Checkout({{ total }})
+              Checkout({{ total }}) ৳
             </button>
             <!-- <button @click="addPro">Checkout({{total}})</button> -->
           </div>
@@ -84,7 +84,7 @@ export default {
   computed: {
     ...mapGetters(["carts"]),
     total() {
-      return this.$store.getters.total;
+      return this.$store.getters.total.toFixed(0);
     },
     finalAmount() {
       return this.total + this.shippingCost;
