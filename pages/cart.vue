@@ -38,9 +38,9 @@
                 <li>Total</li>
               </div>
               <div class="check-box-right">
-                <li>{{ total }} $</li>
-                <li>500 $</li>
-                <li>{{ finalAmount }} $</li>
+                <li>{{ total }} ৳</li>
+                <li>500 ৳</li>
+                <li>{{ finalAmount }} ৳</li>
               </div>
             </div>
             <button class="btn btn-checkout" @click="showModal">
@@ -244,7 +244,10 @@ export default {
   background: #246ef6;
   border-radius: 35px;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .price {
