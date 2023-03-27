@@ -13,7 +13,9 @@
             <img class="cart-item" :src="item.image" alt="" />
           </div>
           <h3 class="price">{{ item.price }} ৳</h3>
-          <h3>{{ item.title }}</h3>
+          <a :href="item.link">
+            <h3>{{ item.title }}</h3></a
+          >
 
           <div class="sites">
             <svg

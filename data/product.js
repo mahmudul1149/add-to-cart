@@ -57,7 +57,7 @@ export default [
     title: "Xiaomi Redmi Note 10 Pro with 6GB RAM and 128GB ROM Nebula Purple",
     price: 90000,
     image:
-      "https://priyoshopbackup.blob.core.windows.net/priyoshop/content/Images/Thumbs/0236169_xiaomi-poco-c31-4gb64gb-smartphone.jpeg",
+      "https://fdn2.mobgsm.com/vv/pics/xiaomi/xiaomi-redmi-note-10-lite-1.jpg",
     link: "https://priyoshop.com/xiaomi-poco-c31-4gb64gb-smartphone",
     category: "  Mobile, Tablets & Accessories",
     site: "PriyoShop",
@@ -138,7 +138,7 @@ export default [
     price: 517900,
     category: "smartphones",
     image:
-      "https://priyoshopbackup.blob.core.windows.net/priyoshop/content/Images/Thumbs/0237601_apple-iphone-13-pro-256gb.jpeg",
+      "https://cdn.shopify.com/s/files/1/1706/9177/products/iphone-13-pro-gold-Custom-Mac-BD_716d7dcf-d289-4818-bb11-467e8c8f8f75.jpg?v=1634651030",
     link: "https://priyoshop.com/apple-iphone-13-pro-256gb",
     site: "PriyoShop",
   },
