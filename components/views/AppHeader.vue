@@ -20,6 +20,12 @@
               <nuxt-link to="/contact">Contact</nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/signup">SignUp</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/signin">SignIn</nuxt-link>
+            </li>
+            <li>
               <nuxt-link to="/cart" class="flex-cart">
                 <span>Cart</span>
                 <img
@@ -43,6 +49,12 @@
             </li>
             <li>
               <nuxt-link to="/contact">Contact</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/signup">SignUp</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/signin">SignIn</nuxt-link>
             </li>
 
             <li>
@@ -140,11 +152,11 @@ header {
 #header ul li a {
   display: inline-block;
   text-decoration: none;
-  color: #333;
+  color: #000066;
   font-weight: 700;
   font-size: 1.1rem;
   margin: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .flex-nav {

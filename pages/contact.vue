@@ -230,7 +230,7 @@
 
 <script></script>
 
-<style>
+<style scoped>
 .contact-box {
   display: flex;
   justify-content: center;
