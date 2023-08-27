@@ -65,8 +65,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background: #f7f7ff;
+  min-height: calc(100vh - 4rem);
   box-sizing: border-box !important;
 }
 .sign-up-page form {

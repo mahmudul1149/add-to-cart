@@ -1,11 +1,18 @@
-<template>
+<!-- <template>
   <div id="app">
     <client-only> </client-only>
     <AppHeaderVue />
     <Nuxt />
   </div>
+</template> -->
+<template>
+  <div class="main-app-container">
+    <client-only> </client-only>
+    <AppHeaderVue />
+    <Nuxt class="page-container" />
+    <AppFooter />
+  </div>
 </template>
-
 <script>
 import AppHeaderVue from "../components/views/AppHeader.vue";
 
@@ -22,5 +29,13 @@ export default {
   max-width: 1300px;
   margin: auto;
   /* padding: 0 2rem; */
+}
+.main-app-container {
+  height: 100%;
+  margin-top: 4rem;
+}
+.page-container {
+  min-height: calc(100vh - 138px);
+  padding: 0;
 }
 </style>

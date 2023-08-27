@@ -1,5 +1,5 @@
 <template>
-  <div class="about container mt-3">
+  <div class="about container">
     <div class="box-container">
       <div class="image-box">
         <img src="../assets/meet.png" alt="" />
@@ -7,14 +7,17 @@
       <div class="about-box">
         <h1>OUR MISSION</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis consequatur aut ratione iste maxime quia,
-          harum et repellendus? Quod aspernatur quae, maxime libero placeat deserunt et commodi sit maiores ullam amet.
-          Ipsum optio voluptatibus libero omnis aspernatur accusamus reiciendis eveniet tempora aperiam sed eligendi
-          soluta, atque nemo nesciunt praesentium fugit! Deleniti, cupiditate eos ex quibusdam voluptatibus libero
-          magnam dolorem dolores! Autem, modi voluptates debitis quam deleniti architecto repellendus doloremque
-          perferendis recusandae ea delectus suscipit dolorem hic illum, exercitationem in laboriosam quos atque aut
-          necessitatibus deserunt. Saepe porro ipsum impedit, consectetur iste nemo maxime molestias expedita atque
-          
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+          consequatur aut ratione iste maxime quia, harum et repellendus? Quod
+          aspernatur quae, maxime libero placeat deserunt et commodi sit maiores
+          ullam amet. Ipsum optio voluptatibus libero omnis aspernatur accusamus
+          reiciendis eveniet tempora aperiam sed eligendi soluta, atque nemo
+          nesciunt praesentium fugit! Deleniti, cupiditate eos ex quibusdam
+          voluptatibus libero magnam dolorem dolores! Autem, modi voluptates
+          debitis quam deleniti architecto repellendus doloremque perferendis
+          recusandae ea delectus suscipit dolorem hic illum, exercitationem in
+          laboriosam quos atque aut necessitatibus deserunt. Saepe porro ipsum
+          impedit, consectetur iste nemo maxime molestias expedita atque
         </p>
       </div>
     </div>
@@ -34,11 +37,8 @@ export default {};
 </script>
 
 <style>
-.mt-3 {
-  margin-top: 4rem !important;
-}
-
 .about .box-container {
+  height: 100vh;
   display: flex;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -96,13 +96,13 @@ export default {};
   display: inline block;
   display: flex;
   align-items: center;
-  gap: .5rem;
-  padding: .7rem 1rem;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
   color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-decoration: none;
   font-size: 1.1rem;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .btn-dark .btn-sec:hover {
@@ -133,9 +133,9 @@ export default {};
   }
 
   .about .image-box img {
-  width: 300px;
-   background-size: cover;
-  background-position: no-repeat;
+    width: 300px;
+    background-size: cover;
+    background-position: no-repeat;
   }
 
   .contact-box {
@@ -152,8 +152,5 @@ export default {};
   .contact-box .title-box {
     width: 100%;
   }
-
-
-
 }
 </style>
